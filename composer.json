@@ -1,0 +1,15 @@
+{
+    "name": "dz/simple-php-library",
+    "description": "GH Adv PHP HW 3",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Zraiev",
+            "email": "dmitryzrayev@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : "^5.5 || ^7.0"
+    }
+}
