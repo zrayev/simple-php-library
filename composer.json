@@ -10,6 +10,13 @@
         }
     ],
     "require": {
-        "php" : "^5.5 || ^7.0"
+        "php" : "^5.5 || ^7.0",
+        "fzaninotto/faker": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "DateTimeHelper\\": "src/DateTimeHelper",
+            "Vendor\\Render\\": "src"
+        }
     }
 }
