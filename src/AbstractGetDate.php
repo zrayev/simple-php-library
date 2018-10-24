@@ -2,6 +2,8 @@
 
 namespace Zraiev\DateTimeHelper;
 
+use DateTime;
+
 abstract class AbstractGetDate implements ShowDateInterface
 {
     /**
@@ -22,9 +24,25 @@ abstract class AbstractGetDate implements ShowDateInterface
     }
 
     /**
-     * @param $result string
+     * @param $day int
+     * @param $month int
+     * @param $year int
+     * @return string int
      */
-    public function showDate($result)
+    public function formatDate($day, $month, $year)
+    {
+        $date = new DateTime();
+        $date->setDate($year, $month, $day);
+        $dateFormated = $date->format('d-m-Y');
+
+        return $dateFormated;
+    }
+
+    /**
+     * @param $result string
+     * @param $language string
+     */
+    public function showDate($result, $language)
     {
     }
 }

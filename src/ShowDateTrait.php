@@ -6,9 +6,10 @@ trait ShowDateTrait
 {
     /**
      * @param $result string
+     * @param $language string
      */
-    public function showDate($result)
+    public function showDate($result, $language)
     {
-        echo "Recalculated date: $result";
+        echo 'Date '. $language . ' : ' . $result . '<br>';
     }
 }
