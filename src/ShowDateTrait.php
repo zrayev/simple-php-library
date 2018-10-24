@@ -4,8 +4,11 @@ namespace Zraiev\DateTimeHelper;
 
 trait ShowDateTrait
 {
+    /**
+     * @param $result string
+     */
     public function showDate($result)
     {
-        echo "Date: $result";
+        echo "Recalculated date: $result";
     }
 }

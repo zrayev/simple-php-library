@@ -8,15 +8,9 @@ use Zraiev\DateTimeHelper\AbstractGetDate;
 
 class JulianDate extends AbstractGetDate
 {
-    public function renderDate()
+    public function renderDate($date)
     {
-        $result = $this->date;
-
-        $month = date('m', $result);
-        $day = date('d', $result);
-        $year = date('Y', $result);
-
-        $jd = cal_to_jd(CAL_GREGORIAN, $month, $day, $year);
+        $jd = cal_to_jd(CAL_GREGORIAN, $date['month'], $date['day'], $date['year']);
 
         return $jd;
     }

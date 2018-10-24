@@ -6,13 +6,11 @@ use Faker\Factory;
 use Zraiev\DateTimeHelper\Julian\JulianDate;
 
 $faker = Factory::create();
+$dateFake = $faker->unixTime($max = 'now');
 
-//$dateFake = $faker->date('d-m-Y');
-$dateNow = time();
-
-$julian = new JulianDate($dateNow);
-$julian2 = $julian->renderDate();
-$julian3 = $julian->formatDate($julian2);
+$julian = new JulianDate($dateFake);
+$julian2 = $julian->formatDate($julian);
+$julian3 = $julian->renderDate($julian2);
 $julian->showDate($julian3);
 
-echo ("<br>".date('d-m-Y',$dateNow));
+echo "<br>"."Test date: ". date('d-m-Y', $dateFake);
