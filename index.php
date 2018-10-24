@@ -11,7 +11,7 @@ use Zraiev\DateTimeHelper\Julian\JulianDate;
 $faker = Factory::create();
 $dateFake = $faker->unixTime($max = 'now');
 
-echo 'Test date:' . date('d-m-Y', $dateFake) . '<br>';
+echo 'Test date : ' . date('d-m-Y', $dateFake) . '<br>';
 
 $julian = new JulianDate($dateFake);
 $julian1 = $julian->renderDate($julian);
