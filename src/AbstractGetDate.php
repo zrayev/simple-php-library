@@ -2,13 +2,12 @@
 
 namespace Zraiev\DateTimeHelper;
 
-abstract class AbstractGetDate implements ShowDateInterface, FormatDateInterface
+abstract class AbstractGetDate implements ShowDateInterface
 {
     /**
      * @var string
      */
     protected $date;
-
 
     public function __construct($date)
     {
@@ -17,34 +16,15 @@ abstract class AbstractGetDate implements ShowDateInterface, FormatDateInterface
 
     /**
      * @param $result string
-     *
-     * @return array
      */
-    public function formatDate($result)
+    public function renderDate($result)
     {
-        $result = $this->date;
-
-        $month = date('m', $result);
-        $day = date('d', $result);
-        $year = date('Y', $result);
-
-        $result = [
-            'month' => $month,
-            'day' => $day,
-            'year' => $year,
-        ];
-
-        return $result;
     }
 
     /**
      * @param $result string
      */
-    public function renderDate($result) {}
-
-    /**
-     * @param $result string
-     */
-    public function showDate($result) {}
-
+    public function showDate($result)
+    {
+    }
 }

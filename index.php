@@ -9,8 +9,7 @@ $faker = Factory::create();
 $dateFake = $faker->unixTime($max = 'now');
 
 $julian = new JulianDate($dateFake);
-$julian2 = $julian->formatDate($julian);
-$julian3 = $julian->renderDate($julian2);
-$julian->showDate($julian3);
+$julian2 = $julian->renderDate($julian);
+$julian->showDate($julian2);
 
 echo "<br>"."Test date: ". date('d-m-Y', $dateFake);
