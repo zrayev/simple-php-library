@@ -10,6 +10,7 @@ class ArabicDate extends AbstractGetDate
     public function __construct($date)
     {
         parent::__construct($date);
+
         $this->month = date('m', $this->date);
         $this->day = date('d', $this->date);
         $this->year = date('Y', $this->date);
@@ -29,7 +30,6 @@ class ArabicDate extends AbstractGetDate
 
         return $this->formatDate($day, $month, $year);
     }
-
 
     use DateTimeHelper\ShowDateTrait;
 }

@@ -12,6 +12,7 @@ class ChineseDate extends AbstractGetDate
     public function __construct($date)
     {
         parent::__construct($date);
+
         $this->month = date('m', $this->date);
         $this->day = date('d', $this->date);
         $this->year = date('Y', $this->date);
@@ -32,7 +33,6 @@ class ChineseDate extends AbstractGetDate
 
         return $this->formatDate($chineseDate['d'], $chineseDate['m'], $chineseDate['y']);
     }
-
 
     use DateTimeHelper\ShowDateTrait;
 }

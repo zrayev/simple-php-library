@@ -10,6 +10,7 @@ class FrenchDate extends AbstractGetDate
     public function __construct($date)
     {
         parent::__construct($date);
+
         $this->month = date('m', $this->date);
         $this->day = date('d', $this->date);
         $this->year = date('Y', $this->date);

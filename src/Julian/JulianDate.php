@@ -10,6 +10,7 @@ class JulianDate extends AbstractGetDate
     public function __construct($date)
     {
         parent::__construct($date);
+
         $this->month = date('m', $this->date);
         $this->day = date('d', $this->date);
         $this->year = date('Y', $this->date);
@@ -23,7 +24,6 @@ class JulianDate extends AbstractGetDate
     public function renderDate($date)
     {
         $julianDay = cal_to_jd(CAL_GREGORIAN, $this->month, $this->day, $this->year);
-
         $a = $julianDay + 32044;
         $b = (int) ((4 * $a + 3) / 146097);
         $c = $a - (int) ($b * 146097 / 4);
@@ -38,15 +38,6 @@ class JulianDate extends AbstractGetDate
         }
 
         return $this->formatDate($day, $month, $year);
-    }
-
-    /**
-     * @param $julianDay string
-     *
-     * @return string
-     */
-    public function jdToYmd($julianDay)
-    {
     }
 
     use DateTimeHelper\ShowDateTrait;
